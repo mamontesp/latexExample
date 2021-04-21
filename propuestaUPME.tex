@@ -1,24 +1,133 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
-
-\title{Propuesta UPME}
-\author{Mayerli Montes }
-\date{Febrero 2021}
 
 \usepackage{natbib}
 \usepackage{graphicx}
 
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+ \usepackage{lscape}
+\usepackage{longtable}
+
+\title{Identificación de problemas y propuesta de soluciones - UPME}
+\author{Mayerli Montes }
+\date{Febrero 2021}
+
+
 \begin{document}
 
+\begin{landscape}
 \maketitle
+\section{Identificación de problemas - Evaluación de proyectos}
 
-\section{Identificación de problemas}
+\begin{longtable}{ |p{12cm}|p{8cm}|p{2cm}|p{2cm}|}
+\hline
+\multicolumn{4}{|c|}{Identificación de problemas - Evaluación de proyectos} \\
+\hline
+Problema & Propuesta & Prioridad & Complejidad\\
+\hline
+\multicolumn{2}{|c|}{Uso de herramientas tecnológicas} & & \\\hline
+El uso de excel para la redacción de documentos aumenta la probabilidad de errores, dado que implica un número de acciones adicionales para la escritura de texto (varios clicks sobre la celda para poder editarla, ajuste de los anchos de las celdas, etc.) & & & \\\hline
 
+En el formato actual de pronunciamiento no se pueden añadir filtros por que hay tablas no relacionadas que se ubican en la misma hoja. Lo anterior dificulta las tareas de búsqueda, que son inherentes al proceso de 
+edición de texto. & Crear hoja x tabla, o incluir las tablas en sentido vertical& & \\\hline
 
+No todos los evaluadores cuentan con licencias para programas que se usan en la revisión (Office 365, AutoCAD). & 1. Adquirir una licencia de AutoCAD que permita el préstamo de licencias para uso remoto. 2. Explorar Autodesk Web and Mobile Account & & \\\hline
 
-\section{Conclusion}
- \citep{adams1995hitchhiker}
+Existe dependencia de una credencial para hacer la autenticación en la plataforma SUIFP. Lo anterior produce un riesgo de bloqueo en las tareas de evaluación en caso de que se cambie dicha credencial por motivos adversos (Partida de un evaluador, inexperiencia de una persona manipulando la plataforma) & Solicitar credenciales independientes para cada uno de los evaluadores & & \\\hline
+
+En documentos escaneados se dificulta la revisión dado que no se pueden realizar búsquedas, ni acciones copiar - pegar. Lo anterior incrementa el tiempo de revisión.  &  Uso de tecnología OCR para conversión de documentos a PDF, por ejemplo Tesseract (Alternativa gratuita) & & \\\hline
+
+El acceso a servidores de la UPME está restringido para algunos evaluadores, lo que causa que se tengan que delegar tareas que en principio cada evaluador podria ejecutar. Lo anterior incrementa tiempo de ejecución de tareas que en principio son sencillas & Hacer una copia del servidor de la UPME a Google Drive, y manejar el servidor de la UPME como un backup del de Google Drive & & \\\hline
+
+[Interno] La firma de documento digital se hace con herramientas que favorecen la manipulación de las mismas con consecuencias en fraude de documentos.  & Firmar los documentos en PDF (Adobe Reader y Foxit Reader tienen esa caracteristica en la versión gratuita) & & \\\hline
+
+[Interno] No se identificó por parte de la autora de este documento la existencia de una plantilla para la generación de documentos en word o power point. Las disparidades de formato causan dificultades cuando de agrupar información se trata por que produce reprocesos en la puesta a punto de documentos.  & Elaboración de plantillas para word y power point con sus respectivos estilos (tamaños, fuentes y formatos) & & \\\hline
+
+[Interno] Se genera duplicidad en archivos compartidos cuando estos se envian por correo electrónico o por servicios de mensajería instantánea como Whatsapp.  & Compartir los documentos en un servidor de acceso común, p.e Google Drive & & \\\hline
+
+[Interno] Solapamiento de agendas en la creación de reuniones y falta de un "orden del día" previo a cada reunión.  & Usar un calendario general y generar suscripciones a dicho calendario. Además, crear la cultura de mantener el calendario actualizado por parte de todos los miembros del equipo, para que se pueda verificar la disponiblidad en cuanto se vaya a agendar una reunión. Marcar asistentes como opcionales. Añadir en la descripción de las reuniones los puntos a tratar & & \\\hline
+
+\multicolumn{2}{|c|}{Trazabilidad} & & \\\hline
+
+Respecto a la tarea de evaluación, hay una dificultad para seguir los cambios en documentos que se hacen de una versión a otra, lo que produce reprocesos en la revisión del proyecto. Por ejemplo, la verificación de un aval técnico se hace de manera manual y no existe un proceso ágil para realizar la comparación con un aval técnico de referencia. Aún cuando se envia el mismo documento en dos versiones, no hay un método que descarte la revisión del documento dada su duplicidad. & Revisar guías para la verificación de contenido digital como por ejemplo \cite{checkdigitalcontent}, implementar un script que se pueda ejecutar por cualquier evaluador en el que se puedan hacer las verificaciones (SHA o MD5) & & \\\hline
+
+No se almacena un control de cambios del proyecto, lo que dificulta la verificación de las fases ya cumplidas. & Mantener todas las versiones del proyecto en un solo documento, en el que se pueda verificar el estado del proyecto en la versión de interés, obviando la necesidad de abrir documentos adicionales. Además, definir un flujo de trabajo para la solución de observaciones, de manera que cuando se reciba el documento respuesta por parte del equipo formulador se puedan añadir las justificaciones a las observaciones en el mismo documento del proyecto. & & \\\hline
+
+La herramienta actual no cuenta con un método para comparar el avance de versión de versión en términos de reducción de costos en los distintos rubros del presupuesto. & Mantener información sobre datos relevantes del proyecto tales como precios por rubro por versión, incluir esta información en el mismo documento del proyecto & & \\\hline
+
+Hay una dependencia entre el evaluador y la evaluación. Lo anterior limita la asignación de proyectos de versiones avanzadas, dado que supone que se mantenga el mismo evaluador para todas las versiones que pueda presentar un proyecto. & Flexibilizar el proceso de evaluación para que puedan incluirse notas propias del evaluador. Además, garantizar que el documento de la evaluación contenga toda la información relevante de un proceso de evaluación & & \\\hline
+
+La información obtenida de mesas técnicas no tiene un camino definido para ser incluida en el proceso de evaluación. & Manejar la información de las mesas técnicas en el mismo archivo que se maneja la información de la evaluación del proyecto, discriminando la fuente de la que se obtuvo la información, en este caso, aclarar que la fuente es una mesa técnica & & \\\hline
+
+El estándar existente para la inclusión de observaciones depende del criterio del evaluador, y no existe un proceso para incluirlas en un punto de acceso común que pueda ser alimentado constantemente. & Crear códigos identificadores para el manejo de observaciones de manera que pueda manejarse una númeración estándar de las observaciones en cada proyecto. (Usar de referencia los pronunciamientos del DNP)& & \\\hline
+
+Aplicaciones como Whatsapp no se prestan para llevar una evidencia de la ejecución de procesos. Además, no hay manera eficiente de realizar la búsqueda de mensajes en este tipo de aplicaciones, lo que incrementa el tiempo de ejecución de ciertas tareas. (p.e Buscar todos los pronunciamientos que fueron enviados en una fecha determinada) & 1. Crear marcadores (palabras clave) que deben ser incluidas en cierto tipo de mensaje, y con eso facilitar su búsqueda. Considerar la posibilidad de migrar las comunicaciones de mensajeria instantánea a Google Chat (Se presenta esta opción por ser este el proveedor de correo que tiene la UPME), otras opciones: Slack & & \\\hline
+
+[Interno] En las reuniones del equipo evaluador se mencionan tareas, pero no está diseñado el proceso para hacer un seguimiento efectivo de las mismas, no siempre se asignan responsables ni fechas objetivo. No se crean verificables para poder calificar una tarea como en progreso, pendiente, terminada o verificada.  & Crear un tablero para el manejo de flujo de trabajo de una tarea. Herramientas como Trello ofrecen paquetes gratuitos que pueden ser aprovechados.  & & \\\hline
+
+\multicolumn{2}{|c|}{Uniformidad} & & \\\hline
+No hay un algoritmo concreto para verificar el precio de transportes. & Elaborar un script (en sh o python) que pueda ejecutarse de manera independiente por cada evaluador en el que con datos de entrada como punto de origen y destino se pueda consultar la información en SICETAC y dar un valor estimado del precio de transporte (Incluso puede pensarse en incluir información de proyectos aprobados) & & \\\hline
+
+No hay una guía explícita de las revisiones que deben hacerse en la primera versión de un proyecto. (Por ejemplo revisión de que las comunidades a beneficiar no pertenezcan al casco urbano del municipio que presenta el proyecto) & Crear una guía explícita de las revisiones, con una descripción que permita a cualquier persona hacer la primera revisión de un proyecto & & \\\hline
+
+No hay un criterio establecido para la revisión de planos. El criterio más común es "si se puede contar, pasa", aunque esto implique una sobrecarga para el evaluador.  & Estandarizar el criterio de revisión de planos, citando específicamente las causas que suelen retrasar su revisión, y considerando si deben aceptarse así, o exigir una mejora al equipo formulador & & \\\hline
+
+No hay un criterio único de selección de precios a revisar. & Documentar la lista de materiales que debe ser revisada, y establecer los casos en los que se hace necesaria una revisión más extensa, o por el contrario un revisión superficial (p.e cuando hay alta demanda de proyectos)& & \\\hline
+
+No hay un criterio descrito para la evaluación de proyectos en condiciones especiales, por ejemplo, cuando hay alta demanda, o cuando por temporadas de contratación hay menos evaluadores disponibles. & Documentar una lista priorizada de cosas a revisar, e incluir una descripción de las situaciones en las que se debe hacer una revisión más corta o más extensa de lo habitual .& & \\\hline
+
+\multicolumn{2}{|c|}{Redundancia en los procesos} & & \\\hline
+Para cada revisión inicial se revisan los precios de los elementos contenidos en el presupuesto. Esta tarea se repite para cada proyecto. & Mantener un registro actualizado de los precios con una temporalidad determinada (cada mes o cada tres meses) de manera que puedan mantenerse estadísticas sobre la fluctuación de los precios respecto a fecha, y respecto a zona geográfica. Este registro (p.e un archivo de excel) debe poder ser consultado por cualquier evaluador, y debe mantenerse actualizado con la periodicidad que determine el equipo evaluador. Además, en este registro debe incluir referencia a archivos de cotizaciones, que deben a su vez ser mantenidos de manera centralizada, garantizando el acceso de todo el personal evaluador & & \\\hline
+
+Dificultad en la comparación de proyectos nuevos con proyectos que ya han sido evaluados, o que ya han cumplido ciertos requisitos lo que los convierte en factibles a ser tomados como referencia para la revisión de precios, rendimientos, transporte, etc. & Idear un método para extraer \emph{metadata} de los archivos en los que se lleve la información del proyecto. Estos datos extraidos pueden ser almacenados en un archivo centralizado que sirva para su posterior revisión y comparación (Extracción de información en un formato que favorezca su distribución, copia y lectura) & & \\\hline
+
+Existencia de varias hojas de cálculo en las que debe reportarse información una vez se ha cumplido con la evaluación de un proyecto.  & Centralizar el proceso de evaluación de un proyecto en un solo documento. Para el manejo externo de la información de los proyectos (precio por rubro, rendimientos y transporte) centralizar la información en documentos de fácil acceso para todo el equipo evaluador. & & \\\hline
+
+La asignación de mesas técnicas requiere la revisión de disponibilidad de varios actores, además no hay un solo canal para asignar las fechas en las que se van a programar las mesas. & Definir y documentar dicha definición de los canales por los que se van a fijar las fechas de mesas técnicas. Un calendario compartido para mesas técnicas podría ser una solución, sin embargo lo más importante es que los actores involucrados lleguen a un acuerdo de como van a manejar la asignación de mesas técnicas & & \\\hline
+
+A pesar de que se emiten los pronunciamientos, en ocasiones las mesas técnicas se convierten en la revisión detallada del documento emitido por la UPME. Las mesas técnicas en la actualidad no están respondiendo a un modelo de pregunta-respuesta. & Crear la cultura que considere la UPME para el manejo de mesas técnicas, y ser rigurosa en su cumplimiento & & \\\hline
+
+\multicolumn{2}{|c|}{Dispersión de la información} & & \\\hline
+
+No todas las fuentes de información para la evaluación de proyectos son de conocimiento de cada evaluador. & Documentar todas las fuentas de las que se puede extraer información para la evaluación de un proyecto, incluir un paso a paso de los accesos y si hay que pedir credenciales, incluir los pasos para su solicitud (Información como correos, números de telefono, nombres, oficinas encargadas, etc) & & \\\hline
+
+\multicolumn{2}{|c|}{Falta de estadísticas} & & \\\hline
+
+Se desconoce la capacidad del equipo en términos de la cantidad de proyectos que puede evaluar por mes. Además, se desconocen los impactos de la salida de un evaluador, y de la entrada de otro. & Hacer un estudio de capacidad y un analísis de sensibilidad sobre la variabilidad del número de evaluadores & & \\\hline
+
+Se desconoce la velocidad de evaluación para proyectos de diferentes departamentos o zonas geográficas. & Concentrar la información disponible y generar las estadísticas respectivas & & \\\hline
+
+Se desconoce el número aproximado de versiones que requiere un proyecto de un departamento determinado para ser calificado como FACTIBLE. & Concentrar la información disponible y generar las estadísticas respectivas & & \\\hline
+
+No existe una lista de acciones que puedan contribuir a la agilización de proyectos de determinadas zonas. & Documentar las acciones tomadas en proyectos anteriores e incluir los proyectos citados como referencia (la URL del proyecto) & & \\\hline
+
+No existe un proceso definido para hacer comparaciones entre proyectos de zonas geográficas distintas a pesar de que las zonas compartan caracteristicas como impacto del conflicto armado, calidad de vías de transporte, actividad económica de sus habitantes, entre otras. & El DNP tiene un estudio \cite{tipologiasDNP} en el que desarrolla un modelo estadistico de componentes principales (PCA), con dichos componentes se pueden agrupar las entidades territoriales cuando comparten caracteristicas más allá de la zona geográfica. Dada esta agrupación se pueden hacer comparaciones de valor para la evaluación de un proyecto & & \\\hline
+
+No hay un proceso para comparar de manera rápida dos proyectos de la misma región. No se almacena información de interés que pueda generar un proyecto, como por ejemplo: Porcentaje del presupuesto destinado a transporte, porcentaje de presupuesto en mano de obra. & Idear un método para extraer \emph{metadata} de los archivos en los que se lleve la información del proyecto. Estos datos extraidos pueden ser almacenados en un archivo centralizado que sirva para su posterior revisión y comparación (Extracción de información en un formato que favorezca su distribución, copia y lectura) & & \\\hline
+
+No hay un lugar de consulta de los factores que más encarecen un proyecto. & Documentar las evidencias en un lugar centralizado, que facilite consulta y posterior actualización & & \\\hline
+
+No existe una manera práctica de identicar la variabilidad del precio de un material y la dependencia de esta con la zona geográfica o las condiciones socioeconómicas de un municipio. & Mantener un registro de los precios con una temporalidad determinada (cada mes o cada tres meses) de manera que puedan mantenerse estadísticas sobre la fluctuación de los precios respecto a fecha, y respecto a zona geográfica. Este registro (p.e un archivo de excel) debe poder ser consultado por cualquier evaluador, y debe mantenerse actualizado con la periodicidad que determine el equipo evaluador. Además, en este registro debe incluir referencia a archivos de cotizaciones, que deben a su vez ser mantenidos de manera centralizada, garantizando el acceso de todo el personal evaluador & & \\\hline
+
+No hay predictibilidad del tiempo que va a tomar la revisión de un proyecto desde que se solicita pronunciamiento basado en los documentos que se entreguen por versión. & Idear un proceso de preevaluación de manera que se pueda identificar de antemano la extensión de la revisión & & \\\hline
+
+\multicolumn{2}{|c|}{Otros} & & \\\hline
+
+[Interno] Hay un estímulo negativo frente a la presentación de propuestas de mejora, dado que usualmente la persona que propone es quien es asignada como ejecutor de la tarea. & Crear una cultura organizacional en la que se puedan presentar ideas y se favorezca la colaboración entre evaluadores. Remarcar la importancia de ser voluntario en un proceso de mejora, que entre otras da visibilidad al evaluador y experiencia en temas que aportan a su desarrollo profesional & & \\\hline
+
+[Interno] Tiempos considerablemente extensos en el entrenamiento de un evaluador junior, lo que ocasiona que los evaluadores senior deban asumir más tareas de las que les corresponden por el tiempo que tome el entrenamiento. & Crear un proyecto de referencia para que los evaluadores junior puedan evaluar durante su proceso de aprendizaje. A su vez, crear un documento de evaluación de ese proyecto, en el que se pueda identificar que ćonocimiento hay que reforzar  & & \\\hline
+
+[Interno] La asignación de evaluadores a un proyecto no tiene un proceso bien definido y hasta donde el conocimiento de la autora alcanza no se consideran las obligaciones de un evaluador no relacionadas a la evaluación de proyectos. (Elaboración de manuales, capacitaciones, entre otras) & Incluir las actividades adicionales en la carga laboral del evaluador, y considerarlas a la hora de asignar proyectos & & \\\hline
+
+\end{longtable}
 
 \bibliographystyle{plain}
 \bibliography{references}
+\end{landscape}
 \end{document}
